@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"MIT (Made In Taiwan)" 授權產生器</title>
+    <style>
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #0066cc;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+        .danger-box {
+            background-color: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+        .info-box {
+            background-color: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-section {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .output-section {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #004c99;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .copy-btn {
+            background-color: #28a745;
+        }
+        .copy-btn:hover {
+            background-color: #218838;
+        }
+        .restricted-party {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .restricted-party input {
+            flex-grow: 1;
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+        .add-btn {
+            background-color: #28a745;
+            padding: 5px 10px;
+        }
+        .remove-btn {
+            background-color: #dc3545;
+            padding: 5px 10px;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .case-study {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        .example-issue {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            border-left: 3px solid #dc3545;
+        }
+        .link-button {
+            display: inline-block;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+        .link-button:hover {
+            background-color: #5a6268;
+        }
+        blockquote {
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+            color: #666;
+            margin-left: 0;
+            padding-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>"MIT (Made In Taiwan)"授權產生器</h1>
+    
+    <div class="danger-box">
+        <h3><span class="emoji">⚠️</span> 請注意：這不應該被使用</h3>
+        <p>此頁面展示了「不應該做的事情」。修改標準開源授權條款並添加額外限制條款是<strong>不符合開源精神</strong>的做法，可能導致法律風險和社群信任危機。</p>
+    </div>
+    
+    <div class="info-box">
+        <h3><span class="emoji">ℹ️</span> 為什麼有這個網頁？</h3>
+        <p>此網站是針對某些政府專案不當使用或修改開源授權的案例所做的警示。</p>
+        <ul>
+            <li>
+                <a href="https://github.com/ITRI-BDL-D/CQL-Project-template/issues/9" target="_blank" class="link-button">Issue #9</a> 
+                ITRI-BDL-D/CQL-Project-template 使用別人的程式碼卻未加入適當的 LICENSE
+            </li>
+            <li>
+                <a href="https://github.com/ITRI-BDL-D/CQL-Project-template/commit/a7f064db3a527cdbeb779579a0d25acba4e14823" target="_blank" class="link-button">Commit a7f064d</a> 
+                <a href="https://github.com/ITRI-BDL-D/CQL-Project-template/issues/10" target="_blank" class="link-button">Issue #10</a> 
+                後來加上的 LICENSE 還是錯誤的模板
+            </li>
+            <li>
+                <a href="https://github.com/ITRI-BDL-D/MOHW_TWCoreIG/commit/c721c828c84310badf9a760140180f310b78267c" target="_blank" class="link-button">Commit c721c82</a> 
+                MOHW_TWCoreIG 專案使用了非標準的「修改版 MIT 授權」(Before Commit d79254a)
+            </li>
+        </ul>
+        <p>更多相關資訊可參考以下連結：</p>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/lorex.l.y/posts/pfbid0fHnjnY7o6QfrKdDM9XJi66byjaxJRkFQFKwFpCnV5BKz5VoMXQNA9iZwiHga8NKjl" target="_blank" class="link-button">Facebook Post</a>
+                Lorex L. Yang 的說明文
+            </li>
+        </ul>
+    </div>
+    
+    
+    <div class="container">
+        <div class="form-section">
+            <h2>"MIT (Made In Taiwan)" 授權產生器示範 <br> <span style="font-size: 0.5em;">ITRI-BDL-D/MOHW_TWCoreIG Commit 0e1a91b</span></h2>
+            <p>以下表單可產生類似案例中的非標準授權條款。<strong>請注意：這僅作為示範，不建議實際使用。</strong></p>
+            
+            <label for="copyright-year">著作權年份：</label>
+            <input type="text" id="copyright-year" placeholder="例如：2022-2025" value="2022-2025">
+            
+            <label for="copyright-holder">著作權擁有者：</label>
+            <input type="text" id="copyright-holder" placeholder="例如：Ministry of Health and Welfare (MOHW)" value="Ministry of Health and Welfare (MOHW)">
+            
+            <h3>限制條款</h3>
+            
+            <div id="restricted-parties-container">
+                <label>被限制的團體：</label>
+                <div class="restricted-party">
+                    <input type="text" class="restricted-party-input" placeholder="輸入被限制方名稱" value="Sitatech Information Services Co., Ltd.">
+                    <button class="remove-btn" onclick="removeRestrictedParty(this)">移除</button>
+                </div>
+                <div class="restricted-party">
+                    <input type="text" class="restricted-party-input" placeholder="輸入被限制方名稱" value="Lorex L. Yang">
+                    <button class="remove-btn" onclick="removeRestrictedParty(this)">移除</button>
+                </div>
+            </div>
+            <button class="add-btn" onclick="addRestrictedParty()">新增被限制方</button>
+            
+            <label for="excluded-party">明確排除的人物：</label>
+            <input type="text" id="excluded-party" placeholder="例如：Hsiu-An Lee" value="Hsiu-An Lee">
+            
+            
+            <h3>著作權歷史</h3>
+            <label for="effective-date">生效日期：</label>
+            <input type="text" id="effective-date" placeholder="例如：Feb 25, 2025" value="Feb 25, 2025">
+            
+            <label for="maintaining-org">維護組織：</label>
+            <input type="text" id="maintaining-org" placeholder="例如：Industrial Technology Research Institute (ITRI)" value="Industrial Technology Research Institute (ITRI)">
+        </div>
+        
+        <div class="buttons">
+            <button onclick="generateLicense()">產生授權條款</button>
+            <button class="copy-btn" onclick="copyToClipboard()">複製到剪貼簿</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>產生的授權條款</h2>
+            <div id="license-output"></div>
+        </div>
+    </div>
+    
+    <div class="info-box">
+        <h3><span class="emoji">💡</span> 正確的做法是什麼？</h3>
+        <ol>
+            <li><strong>使用 Git Fork</strong>：如需複製修改開源專案，請使用 Git 的 Fork 功能，保留所有歷史紀錄。</li>
+            <li><strong>保留原始授權</strong>：不要刪除或修改原始 LICENSE 檔案，必須保留完整內容。</li>
+            <li><strong>適當標註</strong>：在修改的檔案中明確標示變更內容、日期和作者。</li>
+            <li><strong>選擇合適授權</strong>：如需使用更嚴格的授權條款，請選擇現有的標準授權（如 GPL）而非自創條款。</li>
+            <li><strong>遵守 OSI 定義</strong>：如果宣稱是「開源」，則應符合<a href="https://opensource.org/osd/" target="_blank">開源定義</a>的所有條件。</li>
+            <li><strong>法律諮詢</strong>：如有特殊需求，請諮詢專業法律人士而非自行修改授權條款。</li>
+        </ol>
+    </div>
+    
+    <footer>
+        © 2025 Made In Taiwan 授權產生器 - 教育示範網站。本網站僅供教育和資訊目的，不構成法律建議。<br>
+        Generated by GPT (OpenAI, Claude). Website created by @haeimch.
+    </footer>
+
+    <script>
+        function addRestrictedParty() {
+            const container = document.getElementById('restricted-parties-container');
+            const div = document.createElement('div');
+            div.className = 'restricted-party';
+            div.innerHTML = `
+                <input type="text" class="restricted-party-input" placeholder="輸入被限制方名稱">
+                <button class="remove-btn" onclick="removeRestrictedParty(this)">移除</button>
+            `;
+            container.appendChild(div);
+        }
+        
+        function removeRestrictedParty(button) {
+            const container = document.getElementById('restricted-parties-container');
+            if (container.getElementsByClassName('restricted-party').length > 1) {
+                button.parentElement.remove();
+            } else {
+                alert("至少需要一個被限制方。");
+            }
+        }
+        
+        function generateLicense() {
+            const copyrightYear = document.getElementById('copyright-year').value;
+            const copyrightHolder = document.getElementById('copyright-holder').value;
+            const effectiveDate = document.getElementById('effective-date').value;
+            const maintainingOrg = document.getElementById('maintaining-org').value;
+            const excludedParty = document.getElementById('excluded-party').value;
+            
+            // 獲取所有被限制方
+            const restrictedPartyInputs = document.getElementsByClassName('restricted-party-input');
+            const restrictedParties = [];
+            for (let i = 0; i < restrictedPartyInputs.length; i++) {
+                if (restrictedPartyInputs[i].value.trim() !== '') {
+                    restrictedParties.push(restrictedPartyInputs[i].value);
+                }
+            }
+            
+            // 生成被限制方列表
+            let restrictedPartiesList = '';
+            restrictedParties.forEach((party, index) => {
+                restrictedPartiesList += `${index + 1}. ${party}\n`;
+            });
+            
+            const licenseText = `"MIT (Made In Taiwan)" License
+Copyright (c) ${copyrightYear} ${copyrightHolder}
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Additional Restriction Clause
+
+Based on commercial and technical security considerations, the following entities (hereinafter referred to as the "Restricted Parties") are expressly prohibited from using this project:
+
+${restrictedPartiesList}
+The Restricted Parties are explicitly prohibited from engaging in the following activities:
+- Using, modifying, distributing, sublicensing, or merging any part of this project
+- Utilizing this project for any commercial, research, or other purposes
+- Indirectly using or acquiring any interest in this project through third parties
+
+## Copyright History Statement
+
+This project had no explicit license prior to ${effectiveDate}. From ${effectiveDate}, this project has been maintained by ${maintainingOrg} and distributed under the terms of the "MIT (Made In Taiwan)" License, subject to the Additional Restriction Clause above. For all code and contributions before ${effectiveDate}, by using or contributing to this project, the relevant contributors are deemed to have implicitly consented to the application of these license terms.
+
+## Prior Contributions Handling
+
+If any Restricted Party has made contributions to this project:
+1. The copyright of their contributed portions is acknowledged as belonging to them, but the rights of use are subject to the terms of this license
+2. The Restricted Parties may not claim rights to use the entire project based on their prior contributions
+3. The organization reserves the right to rewrite, replace, or remove portions contributed by the Restricted Parties without further notice
+
+## Legal Effect
+
+This restriction clause constitutes an essential part of this license agreement. If any part of this clause is found to be unenforceable, the remaining provisions shall remain in full force and effect to the maximum extent permitted by law.
+
+The organization reserves the right to seek legal remedies in the event of a violation of this restriction clause by the Restricted Parties, including but not limited to injunctive relief, damages, and compensation for legal fees.
+
+## Scope Confirmation
+
+For the avoidance of doubt, this restriction clause applies only to the Restricted Parties specifically listed above and does not affect the rights granted to other individuals or organizations under the "MIT (Made In Taiwan)" License. ${excludedParty} is explicitly excluded from the definition of "Restricted Parties" and is not subject to the above restrictions.
+
+This restriction clause is effective only to the extent permitted by applicable law. In all cases, the standard "MIT (Made In Taiwan)" License terms remain applicable to all non-restricted parties.`;
+
+            document.getElementById('license-output').innerText = licenseText;
+        }
+        
+        function copyToClipboard() {
+            const licenseText = document.getElementById('license-output').innerText;
+            if (licenseText) {
+                navigator.clipboard.writeText(licenseText)
+                    .then(() => alert("授權條款已複製到剪貼簿！"))
+                    .catch(err => console.error('無法複製文字: ', err));
+            } else {
+                alert("請先產生授權條款。");
+            }
+        }
+        
+        // 頁面載入時生成授權條款
+        window.onload = function() {
+            generateLicense();
+        };
+    </script>
+</body>
+</html>
